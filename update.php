@@ -26,19 +26,21 @@
             <th>分店電話</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><input type="text" class="container-fluid" id="storeName" placeholder="修改分店名稱" name="storeName"></td>
-            <td><input type="text" class="container-fluid" id="managerName" placeholder="修改店長名稱" name="storeName"></td>
-            <td><input type="text" class="container-fluid" id="storeAddress" placeholder="修改分店地址" name="storeName"></td>
-            <td><input type="text" class="container-fluid" id="storePhone" placeholder="修改分店電話" name="storeName"></td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <td colspan="4">
-            <input type ="button" class="btn btn-primary float-right" value="修改" onclick="location.href='????.php'"></input>
-          </td>
-        </tfoot>
+        <form class="form-group col-sm-4" action="store_update.php" method="post">
+          <tbody>
+            <tr>
+              <td><input type="text" class="container-fluid" id="storeName" placeholder="修改分店名稱" name="storeName"></td>
+              <td><input type="text" class="container-fluid" id="managerName" placeholder="修改店長名稱" name="managerName"></td>
+              <td><input type="text" class="container-fluid" id="storeAddress" placeholder="修改分店地址" name="storeAddress"></td>
+              <td><input type="text" class="container-fluid" id="storePhone" placeholder="修改分店電話" name="storePhone"></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <td colspan="4">
+              <input type ="submit" class="btn btn-primary float-right" value="修改"></input>
+            </td> 
+          </tfoot>
+        </form>
       </table>
 
       <!--add employee-->
