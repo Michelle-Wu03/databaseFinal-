@@ -83,5 +83,7 @@
 			echo "<script>alert('無此資料，刪除失敗'); location.href = 'drink.php';</script>";
 		}
 
+	}else{
+		header('Location:drink.php');
 	}
 ?>
