@@ -19,7 +19,7 @@
         <!--content-->
         <div class="container p-3 my-3 border border-warning rounded bg">          
             <h1 class = "text-center p-3 ">員工列表</h1>
-            <form class="form-inline row">
+            <div class="form-inline row">
                 <div class="form-group col-sm-12">
                     <form class="form-group col-sm-4" action="employee_inform.php" method="post">
                         <input type="text" class="form-control" id="name" placeholder="搜尋員工名稱" name="name">
@@ -34,7 +34,7 @@
                         <input type ="button" class="btn btn-primary float-right" value="修改點我" onclick="location.href='update.php'"></input>
                     </div>
                </div>
-            </form>
+            </div>
             <br>
             <!--data-->
             <?php
