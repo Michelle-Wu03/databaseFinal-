@@ -45,7 +45,7 @@
 					if(empty($phone))$phone = $original_phone;
 					
 					$success = $stmt->execute(array($name,$mID,$address,$phone));//$address
-					header('Location:update.php');
+					header('Location:store.php');
 					}
 			}
 			else{
