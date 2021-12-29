@@ -47,7 +47,7 @@
 					if($name == '')$name = $original_name;
 					if($eAddress == '')$eAddress = $original_eAddress;
 					if($phone == '')$phone = $original_phone;
-                    if($salary == '')$salary = $original_salary;
+                    			if($salary == '')$salary = $original_salary;
 					if($wAddress == '')$wAddress = $original_wAddress;
 
 					$success = $stmt->execute(array($ID,$name,$eAddress,$phone,$salary,$wAddress));
