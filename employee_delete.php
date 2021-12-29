@@ -28,6 +28,8 @@
 	  		echo "<script>alert('無此員工，刪除失敗'); location.href = 'employee.php';</script>";
 		}
 
+	}else{
+		header('Location:employee.php');
 	}
 	
 ?>
