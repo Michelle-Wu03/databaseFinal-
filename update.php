@@ -55,21 +55,23 @@
             <th>工作地點</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><input type="text" class="container-fluid" id="employeeID" placeholder="修改員工ID" name="employeeID"></td>
-            <td><input type="text" class="container-fluid" id="employeeName" placeholder="修改員工姓名" name="employeeName"></td>
-            <td><input type="text" class="container-fluid" id="employeeAddress" placeholder="修改員工住址" name="employeeAddress"></td>
-            <td><input type="text" class="container-fluid" id="employeePhone" placeholder="修改員工電話" name="employeePhone"></td>
-            <td><input type="text" class="container-fluid" id="salary" placeholder="修改薪水" name="salary"></td>
-            <td><input type="text" class="container-fluid" id="workAddress" placeholder="修改工作地點" name="workAddress"></td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <td colspan="6">
-            <input type ="button" class="btn btn-primary float-right" value="修改" onclick="location.href='????.php'"></input>
-          </td>
-        </tfoot>
+        <form class="form-group col-sm-4" action="employee_update.php" method="post">
+          <tbody>
+            <tr>
+              <td><input type="text" class="container-fluid" id="employeeID" placeholder="修改員工ID" name="employeeID"></td>
+              <td><input type="text" class="container-fluid" id="employeeName" placeholder="修改員工姓名" name="employeeName"></td>
+              <td><input type="text" class="container-fluid" id="employeeAddress" placeholder="修改員工住址" name="employeeAddress"></td>
+              <td><input type="text" class="container-fluid" id="employeePhone" placeholder="修改員工電話" name="employeePhone"></td>
+              <td><input type="text" class="container-fluid" id="salary" placeholder="修改薪水" name="salary"></td>
+              <td><input type="text" class="container-fluid" id="workAddress" placeholder="修改工作地點" name="workAddress"></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <td colspan="6">
+              <input type ="submit" class="btn btn-primary float-right" value="修改"></input>
+            </td>
+          </tfoot>
+        </form>
       </table>
         <!--add drink-->
       <table class="table table-bordered">
@@ -81,19 +83,21 @@
             <th>飲品銷量</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><input type="text" class="container-fluid" id="drinkName" placeholder="修改飲品名稱" name="drinkName"></td>
-            <td><input type="text" class="container-fluid" id="storeName" placeholder="修改分店名稱" name="storeName"></td>
-            <td><input type="text" class="container-fluid" id="drinkPrice" placeholder="修改飲品價格" name="drinkPrice"></td>
-            <td><input type="text" class="container-fluid" id="drinkSales" placeholder="修改飲品銷量" name="drinkSales"></td> 
-          </tr>
-        </tbody>
-        <tfoot>
-          <td colspan="4">
-            <input type ="button" class="btn btn-primary float-right" value="修改" onclick="location.href='????.php'"></input>
-          </td>
-        </tfoot>
+        <form class="form-group col-sm-4" action="drink_update.php" method="post">
+          <tbody>
+            <tr>
+              <td><input type="text" class="container-fluid" id="drinkName" placeholder="修改飲品名稱" name="drinkName"></td>
+              <td><input type="text" class="container-fluid" id="storeName" placeholder="修改分店名稱" name="storeName"></td>
+              <td><input type="text" class="container-fluid" id="drinkPrice" placeholder="修改飲品價格" name="drinkPrice"></td>
+              <td><input type="text" class="container-fluid" id="drinkSales" placeholder="修改飲品銷量" name="drinkSales"></td> 
+            </tr>
+          </tbody>
+          <tfoot>
+            <td colspan="4">
+              <input type ="submit" class="btn btn-primary float-right" value="修改"></input>
+            </td>
+          </tfoot>
+        </form>
       </table>
     </div>
    </body>
