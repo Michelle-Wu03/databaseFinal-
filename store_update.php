@@ -17,7 +17,7 @@
 		for($i=0; $i<count($result); $i++){
 			if($result[$i]['storeName']==$name){//已存在則保留原始資料
 				$find_name = 1;
-				$original_mID = $result[$i]['managerName'];
+				$original_mID = $result[$i]['managerID'];
 				$original_address = $result[$i]['storeAddress'];
 				$original_phone = $result[$i]['storePhone'];
 			}
@@ -37,14 +37,14 @@
 
 		//執行修改
 		if($find_name == 1){
-			if($find_ID == 1){
+			if($find_ID == 1 || $mID ==''){//未輸入或輸入了正確的店長ID情況
 				if($stmt = $db->prepare($sqlUpdate)){	
 					//使用者未輸入的非必要值則令其保持原狀
-					if(empty($mID))$mID = $original_mID;
-					if(empty($address))$address = $original_address;
-					if(empty($phone))$phone = $original_phone;
+					if($mID =='')$mID = $original_mID;
+					if($address == '')$address = $original_address;
+					if($phone == '')$phone = $original_phone;
 					
-					$success = $stmt->execute(array($name,$mID,$address,$phone));//$address
+					$success = $stmt->execute(array($name,$mID,$address,$phone));
 					header('Location:store.php');
 					}
 			}
