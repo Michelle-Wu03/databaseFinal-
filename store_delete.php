@@ -28,6 +28,8 @@
 			echo "<script>alert('無此分店，刪除失敗'); location.href = 'store.php';</script>";
 		}
 
+	}else{
+		header('Location:store.php');
 	}
 
 ?>
