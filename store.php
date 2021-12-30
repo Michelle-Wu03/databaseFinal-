@@ -20,7 +20,7 @@
       <h1 class = "text-center p-3 ">分店列表</h1>
       <div class="form-inline row">
         <div class="form-group col-sm-12">
-          <form class="form-group col-sm-4" action="store_inform.php" method="post">
+          <form class="form-group col-sm-4" method="post">
             <input type="text" class="form-control" id="storeName" placeholder="搜尋分店名稱" name="storeName">
             <button type="submit" class="btn btn-primary">搜尋</button>
           </form>

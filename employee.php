@@ -21,7 +21,7 @@
             <h1 class = "text-center p-3 ">員工列表</h1>
             <div class="form-inline row">
                 <div class="form-group col-sm-12">
-                    <form class="form-group col-sm-4" action="employee_inform.php" method="post">
+                    <form class="form-group col-sm-4" method="post">
                         <input type="text" class="form-control" id="name" placeholder="搜尋員工名稱" name="name">
                         <button type="submit" class="btn btn-primary">搜尋</button>
                     </form>
@@ -38,34 +38,7 @@
             <br>
             <!--data-->
             <?php
-            echo "<table class=\"table table-bordered\">
-            <thead>
-            <tr>
-            <th>員工ID</th>
-            <th>員工姓名</th>
-            <th>員工住址</th>
-            <th>員工電話</th>
-            <th>薪水</th>
-            <th>工作地點</th>
-            </tr>
-            </thead>";
-
-            $query = ("select * from employee");
-            $stmt = $db->prepare($query);
-            $stmt->execute();
-            $result = $stmt->fetchAll();
-
-            for($i=0; $i<count($result); $i++){
-                echo "<tr>";
-                echo "<td>".$result[$i]['ID']."</td>";
-                echo "<td>".$result[$i]['name']."</td>";
-                echo "<td>".$result[$i]['address']."</td>";
-                echo "<td>".$result[$i]['employeePhone']."</td>";
-                echo "<td>".$result[$i]['salary']."</td>";
-                echo "<td>".$result[$i]['storeName']."</td>";
-                echo "</tr>";
-            }
-            echo "</table>";
+            	include "employee_inform.php";
             ?>
         </div>
     </body>

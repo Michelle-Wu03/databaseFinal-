@@ -22,7 +22,7 @@
             <h1 class = "text-center p-3 ">飲品列表</h1>
             <div class="form-inline row">
                 <div class="form-group col-sm-6">
-                    <form action="drink_inform.php" method="post">
+                    <form method="post">
                         <input type="text" class="form-control" id="productName" placeholder="搜尋飲品名稱" name="productName">
                         <input type="text" class="form-control" id="storeName" placeholder="輸入分店名稱" name="storeName">
                         <button type="submit" class="btn btn-primary">搜尋</button>
@@ -44,30 +44,7 @@
             <br>
             <!--data-->
             <?php
-            echo "<table class=\"table table-bordered\">
-            <thead>
-            <tr>
-            <th>飲品名稱</th>
-            <th>分店名稱</th>
-            <th>飲品價格</th>
-            <th>飲品銷量</th>
-            </tr>
-            </thead>";
-
-            $query = ("select * from drink");
-            $stmt = $db->prepare($query);
-            $stmt->execute();
-            $result = $stmt->fetchAll();
-
-            for($i=0; $i<count($result); $i++){
-                echo "<tr>";
-                echo "<td>".$result[$i]['productName']."</td>";
-                echo "<td>".$result[$i]['storeName']."</td>";
-                echo "<td>".$result[$i]['price']."</td>";
-                echo "<td>".$result[$i]['sale']."</td>";
-                echo "</tr>";
-            }
-            echo "</table>";
+            	include "drink_inform.php";
             ?>
         </div>
     </body>
