@@ -38,10 +38,10 @@
 		if($find_ID == 0){//主鍵不存在才能新增
 			if($find_name == 1 || $wAddress==''){//未輸入或輸入了正確的分店名情況
 				if($stmt = $db->prepare($sqlInsert)){//使用者未輸入的非必要值則令其為NULL
-                    if($name == '')$name = NULL;
+                    			if($name == '')$name = NULL;
 					if($eAddress == '')$eAddress = NULL;
 					if($phone == '')$phone = NULL;
-                    if($salary == '')$salary = NULL;
+                   			if($salary == '')$salary = NULL;
 					if($wAddress == '')$wAddress = NULL;
 
 					$success = $stmt->execute(array($ID,$name,$eAddress,$phone,$salary,$wAddress));
