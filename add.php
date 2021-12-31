@@ -28,7 +28,7 @@
             <th>分店電話</th>
           </tr>
         </thead>
-        <form action="http://localhost/insert_store.php" method="post">
+        <form class="form-group col-sm-4" action="store_insert.php" method="post">
             <tbody>
             <tr>
                 <td><input type="text" class="container-fluid" id="storeName" placeholder="輸入分店名稱" name="storeName"></td>
@@ -39,60 +39,66 @@
             </tbody>
             <tfoot>
                 <td colspan="4">
-                    <button type="submit" class="btn btn-primary float-right">新增</button>
+                    <input type ="submit" class="btn btn-primary float-right" value="新增"></input>
                 </td>
             </tfoot>
         </form>
       </table>
 
-      <!--add employee-->
-      <table class="table table-bordered">
+            <!--add employee-->
+            <table class="table table-bordered">
         <thead>
           <tr>
             <th>員工ID</th>
             <th>員工姓名</th>
-            <th>員工地址</th>
+            <th>員工住址</th>
             <th>員工電話</th>
+            <th>薪水</th>
+            <th>工作地點</th>
           </tr>
         </thead>
-        <form action="http://localhost/insert_store.php" method="post">
-            <tbody>
+        <form class="form-group col-sm-4" action="employee_insert.php" method="post">
+          <tbody>
             <tr>
-                <td><input type="text" class="container-fluid" id="employeeID" placeholder="輸入員工ID" name="employeeID"></td>
-                <td><input type="text" class="container-fluid" id="employeeName" placeholder="輸入員工姓名" name="employeeName"></td>
-                <td><input type="text" class="container-fluid" id="employeeAddress" placeholder="輸入員工地址" name="employeeAddress"></td>
-                <td><input type="text" class="container-fluid" id="employeePhone" placeholder="輸入員工電話" name="employeePhone"></td>
+              <td><input type="text" class="container-fluid" id="employeeID" placeholder="輸入員工ID" name="employeeID"></td>
+              <td><input type="text" class="container-fluid" id="employeeName" placeholder="輸入員工姓名" name="employeeName"></td>
+              <td><input type="text" class="container-fluid" id="employeeAddress" placeholder="輸入員工住址" name="employeeAddress"></td>
+              <td><input type="text" class="container-fluid" id="employeePhone" placeholder="輸入員工電話" name="employeePhone"></td>
+              <td><input type="text" class="container-fluid" id="salary" placeholder="輸入薪水" name="salary"></td>
+              <td><input type="text" class="container-fluid" id="workAddress" placeholder="輸入工作地點" name="workAddress"></td>
             </tr>
-            </tbody>
-            <tfoot>
-            <td colspan="4">
-                <button type="submit" class="btn btn-primary float-right">新增</button>
+          </tbody>
+          <tfoot>
+            <td colspan="6">
+              <input type ="submit" class="btn btn-primary float-right" value="新增"></input>
             </td>
-            </tfoot>
-        </from>
+          </tfoot>
+        </form>
       </table>
         <!--add drink-->
       <table class="table table-bordered">
         <thead>
           <tr>
             <th>飲品名稱</th>
+            <th>分店名稱</th>
             <th>飲品價格</th> 
             <th>飲品銷量</th>
           </tr>
         </thead>
-        <form action="http://localhost/insert_store.php" method="post">
-            <tbody>
+        <form class="form-group col-sm-4" action="drink_insert.php" method="post">
+          <tbody>
             <tr>
-                <td><input type="text" class="container-fluid" id="drinkName" placeholder="輸入飲品名稱" name="drinkName"></td>
-                <td><input type="text" class="container-fluid" id="drinkPrice" placeholder="輸入飲品價格" name="drinkPrice"></td>
-                <td><input type="text" class="container-fluid" id="drinkSales" placeholder="輸入飲品銷量" name="drinkSales"></td>
+              <td><input type="text" class="container-fluid" id="drinkName" placeholder="輸入飲品名稱" name="drinkName"></td>
+              <td><input type="text" class="container-fluid" id="storeName" placeholder="輸入分店名稱" name="storeName"></td>
+              <td><input type="text" class="container-fluid" id="drinkPrice" placeholder="輸入飲品價格" name="drinkPrice"></td>
+              <td><input type="text" class="container-fluid" id="drinkSales" placeholder="輸入飲品銷量" name="drinkSales"></td> 
             </tr>
-            </tbody>
-            <tfoot>
+          </tbody>
+          <tfoot>
             <td colspan="4">
-                <button type="submit" class="btn btn-primary float-right">新增</button>
+              <input type ="submit" class="btn btn-primary float-right" value="新增"></input>
             </td>
-            </tfoot>
+          </tfoot>
         </form>
       </table>
     </div>
