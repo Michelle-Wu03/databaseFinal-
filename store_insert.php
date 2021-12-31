@@ -36,7 +36,7 @@
 		if($find_name == 0){//主鍵不存在才能新增
 			if($find_ID == 1 || $mID ==''){//未輸入或輸入了正確的店長ID情況
 				if($stmt = $db->prepare($sqlInsert)){//使用者未輸入的非必要值則令其為NULL
-                    if($mID =='')$mID = NULL;
+                    			if($mID =='')$mID = NULL;
 					if($address == '')$address = NULL;
 					if($phone == '')$phone = NULL;
 
