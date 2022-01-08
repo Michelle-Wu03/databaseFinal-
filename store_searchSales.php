@@ -3,7 +3,6 @@ header('Content-Type: application/json; charset=UTF-8');
 	include "condb.php";	
 	if(!empty($_POST["searchStoreSales"])){
 		$storeName = $_POST["searchStoreSales"];
-        $storeName = "海大店";
 		$sql = ("select storeName, managerID, sum(sale) as sales from store natural inner join drink where storeName = ?");
 		$stmt = $db->prepare($sql);
 		$stmt->execute(array($storeName));
